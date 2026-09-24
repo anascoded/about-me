@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anas S. — Software Engineer</title>
+<meta name="description" content="Anas S. — Software Engineer in Boston, MA. Full-stack projects in React Native, Node.js, Spring Boot, and AWS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0e14; --surface:#12161f; --border:#1f2530;
+    --text:#dbe1ea; --muted:#7c8695; --accent:#e3b341; --accent-dim:#7a6530;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--text); font-family:var(--sans);
+    line-height:1.6; font-size:16px;
+  }
+  a{color:inherit;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+  ::selection{background:var(--accent-dim); color:#fff;}
+
+  /* gutter layout */
+  .line{display:flex; border-bottom:1px solid transparent;}
+  .num{
+    flex:0 0 40px; color:#3a4150; font-family:var(--mono); font-size:12px;
+    padding:2px 12px 2px 0; text-align:right; user-select:none;
+  }
+  .content{flex:1; padding:2px 0;}
+
+  header.hero{padding:80px 0 40px; border-bottom:1px solid var(--border);}
+  .prompt{font-family:var(--mono); color:var(--accent); font-size:14px; margin-bottom:14px;}
+  .cursor{display:inline-block; width:8px; height:16px; background:var(--accent); margin-left:2px; animation:blink 1s steps(1) infinite; vertical-align:-2px;}
+  @media (prefers-reduced-motion: reduce){ .cursor{animation:none;} }
+  @keyframes blink{50%{opacity:0;}}
+
+  h1{
+    font-family:var(--mono); font-weight:600; font-size:clamp(28px,5vw,42px);
+    line-height:1.25; letter-spacing:-0.01em; color:#fff; margin-bottom:10px;
+  }
+  .role{font-size:17px; color:var(--muted); margin-bottom:24px;}
+  .links{display:flex; gap:10px; flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono); font-size:13px; padding:9px 16px;
+    border:1px solid var(--border); border-radius:4px; text-decoration:none;
+    color:var(--text); transition:border-color .15s, color .15s;
+  }
+  .btn:hover, .btn:focus-visible{border-color:var(--accent); color:var(--accent); outline:none;}
+  .btn.primary{background:var(--accent); color:#151204; border-color:var(--accent);}
+  .btn.primary:hover, .btn.primary:focus-visible{opacity:.9; color:#151204;}
+
+  section{padding:48px 0; border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+  .comment{font-family:var(--mono); font-size:13px; color:var(--muted); margin-bottom:22px;}
+  .comment::before{content:'// '; color:#3a4150;}
+
+  .bio p{max-width:62ch; color:#c3ccd8; margin-bottom:14px;}
+  .bio strong{color:var(--text); font-weight:600;}
+
+  .project{padding:20px 0; border-left:2px solid var(--border); padding-left:20px; margin-bottom:22px; transition:border-color .15s;}
+  .project:hover{border-left-color:var(--accent);}
+  .project-head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:6px;}
+  .project h3{font-family:var(--mono); font-size:17px; font-weight:600; color:#fff;}
+  .project h3 a{text-decoration:none;}
+  .project h3 a:hover, .project h3 a:focus-visible{color:var(--accent);}
+  .stack{font-family:var(--mono); font-size:12px; color:var(--accent);}
+  .project p{color:var(--muted); font-size:14.5px; max-width:60ch;}
+
+  .skills{display:flex; flex-wrap:wrap; gap:8px 14px; font-family:var(--mono); font-size:13.5px; color:#c3ccd8;}
+  .skills span::after{content:'·'; color:#3a4150; margin-left:14px;}
+  .skills span:last-child::after{content:'';}
+
+  footer{padding:48px 0 80px; text-align:left;}
+  footer .comment{margin-bottom:16px;}
+  footer p{color:var(--muted); font-size:14.5px; margin-bottom:20px; max-width:56ch;}
+
+  @media (max-width:600px){
+    .num{display:none;}
+    header.hero{padding:56px 0 32px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="prompt">anas@boston:~$ whoami<span class="cursor"></span></div>
+    <h1>Anas S.</h1>
+    <p class="role">Software Engineer · Boston, MA</p>
+    <div class="links">
+      <a class="btn primary" href="#projects">View work</a>
+      <a class="btn" href="https://github.com/anascoded" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mranas/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="bio">
+    <div class="comment">about</div>
+    <p>I like building things end-to-end — owning the data model, the deploy pipeline, and the interface someone actually touches. I'm finishing an <strong>M.S. in Software Development at Boston University</strong>.</p>
+    <p>Before that, I interned at <strong>Marsa Maroc</strong>, building an internal order-processing system with Spring MVC and Hibernate that cut processing time by roughly <strong>40%</strong>.</p>
+    <p>AI tooling is a real part of how I work day to day — for architecture decisions, debugging, and CI/CD troubleshooting — not just autocomplete.</p>
+  </section>
+
+  <section id="projects">
+    <div class="comment">projects</div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3><a href="https://github.com/anascoded/crowdy" target="_blank" rel="noopener">Crowdy</a></h3>
+        <span class="stack">React Native · Expo · AWS Amplify</span>
+      </div>
+      <p>Cross-platform app for discovering and tracking real-time crowd levels at nearby places, using the Google Places API. Ships to iOS, Android, and web from one codebase.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3><a href="https://github.com/anascoded/gitquest" target="_blank" rel="noopener">GitQuest</a></h3>
+        <span class="stack">React · Node.js · MongoDB</span>
+      </div>
+      <p>A gamified web app that teaches Git through interactive missions instead of documentation. Built out from a starter scaffold, including the command-validation layer that checks real Git commands against expected repo state. Deployed via GitHub Actions to AWS ECS.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3><a href="https://github.com/AtlaseraLLC/kems" target="_blank" rel="noopener">Kems</a></h3>
+        <span class="stack">Dart · Flutter</span>
+      </div>
+      <p>A digital version of the classic card game — collect four cards of the same rank across four suits.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3><a href="https://github.com/AtlaseraLLC/survive" target="_blank" rel="noopener">Survive</a></h3>
+        <span class="stack">C#</span>
+      </div>
+      <p>A 2D game built mostly as a way to properly learn game loops and collision handling.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="comment">stack</div>
+    <div class="skills">
+      <span>Java</span><span>Python</span><span>TypeScript / JavaScript</span>
+      <span>React</span><span>React Native</span><span>Spring Boot</span>
+      <span>Node.js</span><span>MongoDB</span><span>AWS (Amplify, ECS)</span>
+      <span>GitHub Actions / CI/CD</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="comment">contact</div>
+    <p>Open to backend and full-stack roles — especially ones where I'll get pushed by engineers better than me. Currently closing the gap on Kafka and event-driven architecture.</p>
+    <div class="links">
+      <a class="btn" href="https://github.com/anascoded" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mranas/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
